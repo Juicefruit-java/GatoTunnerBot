@@ -239,4 +239,4 @@ async def on_ready():
     await bot.change_presence(activity=discord.Streaming(name="lindo gatoooooo <3", url="https://www.twitch.tv/auronplay"))
     print("si te sale este mensaje quiere decir de que el bot funciona creo")
 
-bot.run("ODUxODI5MTI1MDY0Njg3NjQ2.YL99sQ.Lq9wmJzh9LMC-sf8qlId5-2aHHE")
+bot.run(process.env.TOKEN)
