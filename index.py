@@ -1,6 +1,11 @@
 import discord
 from discord.ext import commands
 import random
+import os
+
+env_var = TOKEN
+
+bot.run(env_var)
 
 bot=commands.Bot(command_prefix="!")
 
