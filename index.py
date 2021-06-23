@@ -1,15 +1,12 @@
+#Este archivo esta modificado para tenerlo en github
 import discord
 from discord.ext import commands
 import random
-import os
-
-env_var = TOKEN
 
 bot=commands.Bot(command_prefix="!")
 
 imagenes=[
-
-#imagenes martin
+#imagenes
 "https://cdn.discordapp.com/attachments/692429073317888000/851827864973344778/image0.jpg",
 "https://cdn.discordapp.com/attachments/692429073317888000/851827865288966194/image1.jpg",
 "https://cdn.discordapp.com/attachments/692429073317888000/851827865933971516/image2.jpg",
@@ -17,9 +14,9 @@ imagenes=[
 "https://cdn.discordapp.com/attachments/692429073317888000/851827866564165642/image4.jpg",
 "https://cdn.discordapp.com/attachments/692429073317888000/851827866773356614/image5.jpg",
 "https://cdn.discordapp.com/attachments/692429073317888000/851827920241950770/image0.jpg",
-
-
-#imagenes javo
+"https://cdn.discordapp.com/attachments/692429073317888000/852692482767585280/image0.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/852692483170369576/image1.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/852692483536060426/image2.jpg",
 "https://cdn.discordapp.com/attachments/667924078958477332/852001771369922590/image0.jpg",
 "https://cdn.discordapp.com/attachments/667924078958477332/852002061079543878/image0.jpg",
 "https://cdn.discordapp.com/attachments/667924078958477332/852002061323075604/image1.jpg",
@@ -90,8 +87,6 @@ imagenes=[
 "https://cdn.discordapp.com/attachments/667924078958477332/852002927828664320/image9.jpg",
 "https://cdn.discordapp.com/attachments/667924078958477332/852002985316057148/image0.jpg",
 "https://cdn.discordapp.com/attachments/667924078958477332/852002985721593935/image1.jpg",
-
-#imgur
 "https://imgur.com/zGHzLgQ",
 "https://imgur.com/9wNvWXt",
 "https://imgur.com/vPVjLV1",
@@ -107,7 +102,7 @@ imagenes=[
 "https://imgur.com/BNmDwgC",
 "https://imgur.com/ZJ7lRBO",
 "https://imgur.com/08u9JKr",
-"https://imgur.com/Pc1pgp3",
+"https://i.imgur.com/Pc1pgp3.jpg",
 "https://imgur.com/xT5IIWH",
 "https://imgur.com/1NowH9M",
 "https://imgur.com/UisPBnO",
@@ -212,13 +207,42 @@ imagenes=[
 "https://imgur.com/I8L3Drl",
 "https://imgur.com/TwTqAKZ",
 "https://imgur.com/sbGigql",
-"https://imgur.com/2fE5rLQ"
+"https://imgur.com/2fE5rLQ",
 "https://imgur.com/OCW7GMi",
 "https://imgur.com/g5VwoYv",
 "https://imgur.com/l52vJBY",
 "https://imgur.com/tMoVGbk",
 "https://imgur.com/4sZVf0d",
-
+"https://cdn.discordapp.com/attachments/851964206659272724/852692553467035659/20210610_144518.jpg",
+"https://cdn.discordapp.com/attachments/851964206659272724/852692553861169193/20210610_144501.jpg",
+"https://cdn.discordapp.com/attachments/851964206659272724/852692554356752404/20210610_144455.jpg",
+"https://cdn.discordapp.com/attachments/851964206659272724/852692554830577674/20210610_144434.jpg",
+"https://cdn.discordapp.com/attachments/851964206659272724/852692555320655894/20210610_144349.jpg",
+"https://cdn.discordapp.com/attachments/851964206659272724/852692555857788968/20210610_144334.jpg",
+"https://cdn.discordapp.com/attachments/851964206659272724/852692556415500308/20210610_144359.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139545372590090/image0.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139545734086677/image1.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139546140409876/image2.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139546445545482/image3.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139679293308988/image1.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139679610503168/image2.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139679938052106/image3.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/854139680432848916/image4.jpg",
+"https://imgur.com/2oaKTXp",
+"https://imgur.com/1eonwCc",
+"https://imgur.com/hp9AclR",
+"https://imgur.com/FoH06Qi",
+"https://imgur.com/F1O5ZJH",
+"https://imgur.com/a8XlJj6",
+"https://imgur.com/Al7hUxn",
+"https://imgur.com/oENpieG",
+"https://imgur.com/5d6kqBk",
+"https://imgur.com/XkQ3WjD",
+"https://imgur.com/qVcNuzz",
+"https://cdn.discordapp.com/attachments/692429073317888000/855106560216530964/image0.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/855106560694157312/image1.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/855106561155268648/image2.jpg",
+"https://cdn.discordapp.com/attachments/692429073317888000/855106561599602728/image3.jpg"
 ]
 
 @bot.command()
@@ -226,20 +250,24 @@ async def gato(ctx):
     await ctx.send(random.choice(imagenes))
 
 @bot.command()
-async def id(ctx, val: int):
-    await ctx.send(imagenes[val])
+async def id(ctx, valor: int):
+    await ctx.send(imagenes[valor])
 
 @bot.command()
 async def creditos(ctx):
-    await ctx.send("Programador: 03x3f#1996 | Imagenes: 03x3f#1996, sushi#7191, Martin2509 ツ#9999")
+    await ctx.send("Programador: 03x3f#2048 | Imagenes: 03x3f#2048, sushi#7191, Martin2509 ツ#9999")
 
 @bot.command()
-async def invite(ctx):
+async def gatoinvite(ctx):
     await ctx.send("https://discord.com/oauth2/authorize?client_id=851829125064687646&permissions=1133584&scope=bot")
 
+@bot.command()
+async def info(ctx):
+    await ctx.send('Actualmente el bot tiene 235 imagenes disponibles puedes poner una en especifico si quieres con !id \n \nTambien si quieres tener la lista entera de comandos puedes hacer !help esto te pondra toda la lista de comandos (aunque tambien puede que otros bots tambien te muestren la suya lol)')
+#
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Streaming(name="lindo gatoooooo <3", url="https://www.twitch.tv/auronplay"))
+    await bot.change_presence(activity=discord.Streaming(name='!gato !info', url="https://www.twitch.tv/auronplay"))
     print("si te sale este mensaje quiere decir de que el bot funciona creo")
 
-bot.run("ODUxODI5MTI1MDY0Njg3NjQ2.YL99sQ.Lq9wmJzh9LMC-sf8qlId5-2aHHE")
+bot.run("aqui va el token")
